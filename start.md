@@ -16,6 +16,6 @@ git <kommando> -h
 
 ## 3. Lektioner
 
-[Lektion 1: Tre *states*](lektion1.md)
-[Lektion 2: Lokala grenar](lektion2.md)
-[Lektion 3: Distribuerad Git](lektion3.md)
+* [Lektion 1: Tre *states*](lektion1.md)
+* [Lektion 2: Lokala grenar](lektion2.md)
+* [Lektion 3: Distribuerad Git](lektion3.md)
