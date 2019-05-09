@@ -1,5 +1,23 @@
-# gitkurs
+# Gitkurs
 
-This is a course in using Git through the command line interface. It's written in Swedish.
+Välkommen till den här kursen i Git-hantering via terminalen! Vi ska tillsammans gå igenom tre lektioner som förhoppningsvis tar dig från glad nybörjare till kvalificerat proffs.
 
-[Start](start.md)
+## 1. Förberedelser
+
+* Installera [Git](https://git-scm.com/).
+
+## 2. Hjälp
+
+Det kan vara bra att veta att varje Git-kommando har ett hjälpavsnitt som enkelt kan visas i terminalen.
+
+```
+git <kommando> -h
+```
+
+## 3. Lektioner
+
+Innan vi börjar med lektionerna kan det vara bra att gå igenom vad versionshantering faktiskt är och vilka fördelar som finns med att använda ett system för [versionshantering](versionshantering.md).
+
+* [Lektion 1: Tre *states*](lektion1.md)
+* [Lektion 2: Lokala grenar](lektion2.md)
+* [Lektion 3: Distribuerad Git](lektion3.md)
