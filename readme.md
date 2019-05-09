@@ -21,3 +21,17 @@ Innan vi börjar med lektionerna kan det vara bra att gå igenom vad versionshan
 * [Lektion 1: Tre *states*](lektion1.md)
 * [Lektion 2: Lokala grenar](lektion2.md)
 * [Lektion 3: Distribuerad Git](lektion3.md)
+
+## 4. Rekommenderad arbetsmetod
+
+* Projekt skapas på GitHub.
+* Projekt konfigureras för att endast tillåta *squash merging*.
+* Arbete sker på arbetsgrenar med namngivningsschema "wip-*".
+* Infogning av master i arbetsgrenar sker kontinuerligt under arbetets gång.
+* Granskning av arbetsgrenar sker genom *pull requests* på GitHub.
+* Kompletting vid granskning sker genom att ytterligare ändringar skickas upp på respektive arbetsgren.
+
+Vid licensering av GitHub bör följande även konfigureras för varje projekt. Dessa funktioner är inte tillgängliga för icke-betalande användare.
+
+* En regel sätts för grenen "master" som kräver granskning av ändringar.
+* Ytterligare en regel sätts för övriga grenar "*" som förhindrar tvingande skrivning (*force push*).
