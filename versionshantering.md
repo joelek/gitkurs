@@ -26,8 +26,8 @@
 
 * Skillnader beräknas för textfiler
 * Bättre lämpat för textfiler
-* Datafiler versionshanteras i sin helhet
-* Datafiler går att återställa och spåra
+* Skillnader beräknas ej för datafiler
+* Datafiler blir tyngre men går lika bra att versionshantera
 
 ## Vad är Subversion?
 
@@ -49,6 +49,7 @@
 
 * Samtliga fördelar som för enskilda utvecklare
 * Möjligheten till parallellt arbete
+* Granskningsprocess för ändringar
 
 ## Vad är GitHub?
 
@@ -56,6 +57,7 @@
 * En hostinglösning för Git-projekt
 * Möjliggör samarbetande med andra GitHub-användare
 * Tillhandahar en process för granskning av ändringar
-* Ägs av Microsoft
 * Tillåter privata och publika projekt
 * Kan integreras med andra system (bland annat CI/CD-system)
+* Går att licensera för internt bruk
+* Ägs av Microsoft
