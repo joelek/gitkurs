@@ -180,15 +180,15 @@ git checkout master
 Detta sätter den valda grenen till grenen "master".
 
 ```
-git rebase master
+git merge extra
 git status
 ```
 
-Git klarar inte av att automatiskt ändra utgångspunkten för den valda grenen (extra). Detta då liknande ändringar har gjorts parallellt i den valda grenen och i grenen till vilken utångspunkten försöker ändras.
+Git klarar inte av att automatiskt infoga grenen "extra" i den valda grenen (master). Detta då liknande ändringar har gjorts parallellt i båda grenarna.
 
 När Git upptäcker konflikter kommer Git att ändra berörda filer och markera raderna som orsakar konflikten med en speciell syntax. Här behöver du som användare välja vilken av de två ändringarna (eller en kombination av de båda!) som är korrekt. Du redigerar filen till önskat tillstånd och fortsätter sedan.
 
 ```
 git add material.txt
-git rebase --continue
+git commit --message "infogar grenen extra"
 ```
