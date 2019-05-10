@@ -13,7 +13,7 @@ git init --bare
 
 Detta initierar ett naket Git-projekt i katalogen.
 
-Nakna projekt har till skillnad från vanliga projekt inte tre *states* utan endast ett, *repository*. Följdaktligen tillåter Git inte att man använder vissa kommandon i ett naket projekt utan tanken är istället att nakna projekt strikt ska användas för synkronisering.
+Nakna projekt har till skillnad från vanliga projekt inte tre tillstånd för ändringar utan endast ett, *repository*, det vill säga endast sparade ändringar. Följdaktligen tillåter Git inte att man använder vissa kommandon i ett naket projekt utan tanken är istället att nakna projekt strikt ska användas för synkronisering.
 
 ```
 git branch
@@ -50,7 +50,7 @@ Detta hämtar sparade ändringar från fjärrprojektet "origin" och lagrar dessa
 
 ## 3. Konfigurera synkronisering av lokal gren mot fjärrgren i fjärrprojekt
 
-Vi har än så länge bara gett Git vetskapen om ett fjärrprojekt men har ännu inte definerat den lokala grenens fjärrgren (*upstream*), en gren i ett fjärrprojekt som den lokala grenen följer.
+Vi har än så länge bara gett Git vetskapen om ett fjärrprojekt men har ännu inte definerat den lokala grenens fjärrgren (*upstream*). En fjärrgren är helt enkelt en gren i ett fjärrprojekt som den lokala grenen följer.
 
 ```
 git branch --set-upstream-to origin/master
@@ -99,14 +99,14 @@ Listan över fjärrprojekt visas och innehåller fjärrprojektet "origin" som au
 git branch
 ```
 
-Listan över grenar visas och innehåller den lokala grenen master. Den lokala grenen "master" har automatiskt konfigurerats så att den följer fjärrgrenen "master" på fjärrprojektet "origin".
+Listan över grenar visas och innehåller den lokala grenen "master". Den lokala grenen "master" har automatiskt konfigurerats så att den följer fjärrgrenen "master" på fjärrprojektet "origin".
 
 ## 5. Låt Bob spara en ändring på fjärrprojektet
 
 * Redigera innehållet i filen "material.txt", förslagsvis genom att lägga till en rad med texten "Hyr en ateljé.". Spara sedan filen.
 
 ```
-git commit --all --message "lägger till ateljé i material"
+git commit --all --message "lägger till ateljé i material.txt"
 git log --oneline
 ```
 
@@ -153,7 +153,7 @@ git merge origin/master
 git log --oneline
 ```
 
-Ändringarna som Bob skickade till fjärrprojektet "origin" har nu integrerats lokalt hos Alice. Detta skedde utan problem då infogningen var trivial (*fast-forward*).
+Ändringarna som Bob skickade till fjärrprojektet "origin" har nu integrerats lokalt hos Alice. Detta skedde utan problem då infogningen var trivial (*fast-forward*) och därmed konfliktfri.
 
 Även denna kommandoföljd är så pass vanlig att det finns ett kortkommando som gör allting på en gång.
 

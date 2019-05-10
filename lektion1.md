@@ -1,6 +1,6 @@
-# Lektion 1: Tre *states*
+# Lektion 1: Ändringars tre tillstånd
 
-I den första lektionen av kursen lär vi oss att arbeta med Gits tre olika *states*. Dessa är *working directory* där alla nya ändringar du gör hamnar, *staging area* där alla ändringar du väljer hamnar samt *repository* där alla sparande ändringar hamnar. Efter lektionen kommer du att kunna använda Git för lokal, linjär versionshantering.
+I kursens första lektion lär vi oss att arbeta med Gits tre olika tillstånd för ändringar *states*. Dessa är *working directory* där alla nya ändringar du gör hamnar, *staging area* där alla ändringar du väljer hamnar samt *repository* där alla sparande ändringar hamnar. Efter lektionen kommer du att kunna använda Git för lokal, linjär versionshantering.
 
 ## 1. Initiera Git för Alice
 
@@ -110,14 +110,14 @@ Detta skapar en ny sparad ändring i Gits *repository*.
 
 ```
 git status
-git add .
+git add material.txt
 git status
 ```
 
 Ändringarna som låg i Gits *working directory* valdes genom att adderas till Gits *staging area*.
 
 ```
-git reset head
+git reset head material.txt
 git status
 ```
 
@@ -126,19 +126,19 @@ git status
 ## 8. Filer kan återställas till versioner sparade i Gits "repository"
 
 ```
-git checkout -- .
+git checkout -- material.txt
 git status
 ```
 
 Ändringarna som låg i Gits *working directory* togs bort för alltid då de aldrig sparades i Gits *repository*.
 
-## 9. Ändringar sparade i Gits *repository* kan justeras
+## 9. Ändringar sparade i Gits *repository* kan uppdateras
 
 * Redigera innehållet i filen "material.txt" en gång till, förslagsvis genom att lägga till en rad med texten "Införskaffa några penslar.". Spara sedan filen.
 
 ```
 git status
-git add .
+git add material.txt
 git status
 ```
 
@@ -146,25 +146,28 @@ git status
 
 ```
 git commit --amend --no-edit
-git status
+git log --oneline
 ```
 
 De valda ändringarna i Gits *staging area* tillfördes den senaste sparade ändringen utan att meddelandet för ändringen ändrades.
 
-## 10.  Meddelanden sparade i Gits *repository* kan justeras
+## 10.  Meddelanden sparade i Gits *repository* kan uppdateras
 
 ```
-git status
-git log --oneline
 git show head
 ```
 
-Meddelandet för den senaste sparade ändringen passar inte längre innehållet.
+Meddelandet för den senaste sparade ändringen passar inte längre som beskrivning av det som ändrats.
 
 ```
-git status
-git commit --amend --message "lägger till material i material.txt"
-git status
+git diff --staged
+```
+
+Skillnaderna mellan Gits *staging area* och Gits *repository* visas. Det finns inga skillnader.
+
+```
+git commit --amend --message "lägger till saker i material.txt"
+git show head
 ```
 
 Gits *staging area* är tom så kommandot ändrar endast meddelandet för den senaste sparade ändringen.
